@@ -119,15 +119,14 @@ export default defineComponent({
 <style lang="scss">
 #app {
     color: #2ecc71;
-    position: relative;
     width: 100%;
     flex-direction: column;
 }
 
 .button-chart {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 20px;
+    top: 5px;
     background: #2d8feb;
     color: #ffffff;
     border-radius: 8px;
