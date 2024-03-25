@@ -46,7 +46,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import { Chart, Grid, Line } from 'vue3-charts'
-import { useQueryStore } from '@/stores/queryStore'
+// import { useQueryStore } from '@/stores/queryStore'
 
 export default defineComponent({
     setup() {
@@ -56,14 +56,14 @@ export default defineComponent({
             Q: number,
             S: number
         }
-
-        const queryStore = useQueryStore()
-        let date = new Date()
-        let beforeHourDate = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}T${(date.getHours() - 1) > 0 ? (date.getHours() - 1).toString().padStart(2, '0') : '00' }:${date.getMinutes().toString().padStart(2, '0')}:${date.getSeconds().toString().padStart(2, '0')}`
-        let currentDate = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}T${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}:${date.getSeconds().toString().padStart(2, '0')}`
-        function refreshData() {
-            queryStore.getQuery(beforeHourDate, currentDate)
-        }
+        // Реализация нормальной функции из стора
+        // const queryStore = useQueryStore()
+        // let date = new Date()
+        // let beforeHourDate = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}T${(date.getHours() - 1) > 0 ? (date.getHours() - 1).toString().padStart(2, '0') : '00' }:${date.getMinutes().toString().padStart(2, '0')}:${date.getSeconds().toString().padStart(2, '0')}`
+        // let currentDate = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}T${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}:${date.getSeconds().toString().padStart(2, '0')}`
+        // function refreshData() {
+        //     queryStore.getQuery(beforeHourDate, currentDate)
+        // }
 
         const margin = ref({
             left: 0,

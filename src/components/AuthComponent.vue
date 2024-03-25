@@ -11,18 +11,11 @@
 <script lang="ts" setup>
 import { useAuthStore } from '@/stores/authStore'
 
-
 const store = useAuthStore()
-
-
-
-
 
 function clickSubmit() {
     store.login(store.userForm, store.passForm)    
 }
-
-
 </script>
 
 <style lang="scss">
