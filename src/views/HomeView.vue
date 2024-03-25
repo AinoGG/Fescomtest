@@ -1,4 +1,5 @@
 <template>
+   <!-- чтобы включить поле авторизации в сторе нужно поставить auth = false -->
     <AuthComponent v-if="!store.auth"/>
     <ChartComponent v-else/>
   </template>
